@@ -70,7 +70,7 @@ class _QuoteListState extends State<QuoteList> {
     return Scaffold(
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
-        title: Text('Awesome Quotes'),
+        title: Text('Saved Quotes'),
         centerTitle: true,
         backgroundColor: Colors.redAccent,
         actions: [
@@ -80,6 +80,75 @@ class _QuoteListState extends State<QuoteList> {
               },
               icon: Icon(Icons.refresh))
         ],
+      ),
+      drawer: Drawer(
+        backgroundColor: Colors.grey[200],
+        child: ListView(
+          children: [
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              color: Colors.redAccent,
+              child: SizedBox(
+                  height: 56,
+                  child: Row(
+                    children: [
+                      CircleAvatar(
+                        child: Icon(Icons.person),
+                      ),
+                      TextButton(
+                        onPressed: () {},
+                        child: Text(
+                          "User",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      )
+                    ],
+                  )),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            TextButton.icon(
+              onPressed: () {},
+              icon: Icon(
+                Icons.search,
+                color: Colors.redAccent,
+              ),
+              label: Text(
+                "Search Quotes",
+                style: TextStyle(color: Colors.redAccent),
+              ),
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            TextButton.icon(
+              onPressed: () {},
+              icon: Icon(
+                Icons.double_arrow_rounded,
+                color: Colors.redAccent,
+              ),
+              label: Text(
+                "Explore Quotes",
+                style: TextStyle(color: Colors.redAccent),
+              ),
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            TextButton.icon(
+              onPressed: () {},
+              icon: Icon(
+                Icons.star_rounded,
+                color: Colors.redAccent,
+              ),
+              label: Text(
+                "Saved Quotes",
+                style: TextStyle(color: Colors.redAccent),
+              ),
+            )
+          ],
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
