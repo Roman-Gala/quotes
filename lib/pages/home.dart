@@ -82,7 +82,7 @@ class _QuoteListState extends State<QuoteList> {
               icon: Icon(Icons.refresh))
         ],
       ),
-      drawer: SideMenu(user: "User"),
+      drawer: SideMenu(user: "User", quotes: quotes,),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(0, 0, 0, 12),
         child: ListView(
